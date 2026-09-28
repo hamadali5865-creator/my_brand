@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./proj2.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo">MyBrand</div>
+
+        <!-- Toggle Button (☰ / ✖) -->
+        <div class="menu-toggle" id="menuToggle">
+          <span id="toggleIcon">&#9776;</span>
+        </div>
+
+        <nav class="nav" id="navMenu">
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <div class="nav-buttons">
+            <button class="btn login">Login</button>
+            <button class="btn signup">Sign Up</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- section one -->
+    <section class="section-onee">
+      <div class="frame">
+        <img class="bac-image" src="assest/Rectangle 10205.png" alt="" />
+        <p class="betwen">Contact Us</p>
+      </div>
+    </section>
+
+    <!-- section two -->
+    <section>
+      <div class="container">
+        <div class="mainn-two">
+          <div class="pics-png">
+            <img class="tally" src="assest/Rectangle 1 (1).png" alt="" />
+          </div>
+          <form class="forms">
+            <p class="contactt">Contact Us</p>
+
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+              class="email"
+            />
+
+            <div class="two-display">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Last Name"
+                class="email"
+                required
+              />
+              <img class="eye" src="assest/Group.png" alt="" />
+            </div>
+
+            <div class="two-display">
+              <input
+                type="text"
+                name="message"
+                id="message"
+                placeholder="Message"
+                class="email"
+                required
+              />
+              <img class="eye" src="assest/Group.png" alt="" />
+            </div>
+
+            <div class="agreed">
+              <div class="circle"></div>
+              <p class="read">
+                I have read and agreed to the Terms of Service and Privacy
+                Policy
+              </p>
+            </div>
+            <button class="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- JavaScript inside HTML -->
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const navMenu = document.getElementById("navMenu");
+      const toggleIcon = document.getElementById("toggleIcon");
+
+      menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("open");
+
+        // Toggle between hamburger and close icon
+        if (navMenu.classList.contains("open")) {
+          toggleIcon.innerHTML = "&times;"; // ✖
+        } else {
+          toggleIcon.innerHTML = "&#9776;"; // ☰
+        }
+      });
+    </script>
+  </body>
+</html>
